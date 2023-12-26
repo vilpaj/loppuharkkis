@@ -11,7 +11,7 @@ function createCourses(){
     return{
         subscribe,
         // @ts-ignore
-        add: (course) => update((courses) => [...courses, course]),
+        add: (course) => update((og_courses) => [...og_courses, course]),
         reset: () => set([])
     }
 }
