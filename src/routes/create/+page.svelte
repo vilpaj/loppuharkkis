@@ -1,6 +1,16 @@
 <script>
-	import CreateNote from "../CreateNote.svelte";
+	import ListCourse from "../ListCourse.svelte";
+	
+	let isExpanded = false;
+	function toggleExp(){
+		isExpanded = !isExpanded;
+	}
 
 </script>
 
-<CreateNote />
+<div>
+	<button on:click={toggleExp}>Choose course</button>
+	{#if isExpanded}
+		<ListCourse />
+	{/if}
+</div>

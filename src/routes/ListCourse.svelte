@@ -19,8 +19,6 @@
 
 </script>
 
-
-<h2>Courses listed: </h2>
 <ul>
     {#each [...courseAPI, ...$courses] as course (course.id)}
         <Course {...course} />
