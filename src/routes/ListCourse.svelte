@@ -1,7 +1,5 @@
 <script>
 // @ts-nocheck
-
-    import Course from "./Course.svelte";
     import { courses } from "$lib/courseStore.js"
 
     let courseAPI = [];
@@ -16,11 +14,20 @@
         }
     }
     getCourses();
-
+    
 </script>
 
 <ul>
-    {#each [...courseAPI, ...$courses] as course (course.id)}
-        <Course {...course} />
+    {#each [...courseAPI, ...$courses] as {id, name}}
+        <li>
+            <a href={`/course/${id}`}>{name} // ID: {id}</a>
+        </li>
     {/each}
 </ul>
+
+<style>
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+</style>

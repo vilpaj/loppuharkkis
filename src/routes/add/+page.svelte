@@ -5,7 +5,6 @@
 </script>
 
 <AddCourse />
-
 <h2>Courses listed: </h2>
 
 <ListCourse />
