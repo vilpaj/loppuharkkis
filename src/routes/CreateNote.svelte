@@ -1,5 +1,5 @@
 <script>
-	import { notes } from "$lib/noteStore";
+	import { notes } from "$lib/noteStore.js";
 
     let courseName = "";
     let courseID = "";
@@ -31,9 +31,31 @@
 </script>
 
 <div>
-    <p><strong>Save note: </strong></p>
+    <p><strong>Save a note: </strong></p>
     <input bind:value={courseName} placeholder="Course Name" />
     <input bind:value={courseID} placeholder="Course ID" />
     <input bind:value={text} placeholder="Text" />
     <button on:click={saveNote}>Save</button>
 </div>
+
+<style>
+    div p{
+        font-size: 25px;
+        margin-bottom: 8px;
+    }
+    input{
+        width: 20%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+    }
+    button{
+        padding: 10px;
+        margin-top: 10px;
+        background-color: rgb(235, 214, 165);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>

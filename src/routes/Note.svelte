@@ -1,27 +1,30 @@
 <script>
     // @ts-nocheck
-        export let id;
+        //export let id;
         export let text;
         export let course;
         export let timestamp;
     
         const {id: courseID, name: courseName} = course
-    </script>
+</script>
     
-    <div>
-        <p>Course name: {courseName} // ID: {courseID}</p>
-        <p>{timestamp}</p>
-        {#if text !== undefined}
-            <p>{text}</p>
-        {:else}
-            <p>Ei muistiinpanoja!</p>  
-        {/if}
+<div>
+    <p>Course name: {courseName} // ID: {courseID}</p>
+    <p>{timestamp}</p>
+    {#if text !== undefined}
+        <p>{text}</p>
+    {:else}
+        <p>Ei muistiinpanoja!</p>  
+    {/if}
         
-    </div>
+</div>
     
-    <style>
-        div{
-            border: 1px solid black;
-            margin-bottom: 1rem;
-        }
-    </style>
+<style>
+    div{
+        border: 1px solid black;
+        margin-bottom: 1rem;
+        background-color: rgb(168, 166, 145);
+        border-radius: 10px;
+        padding: 10px;
+    }
+</style>
