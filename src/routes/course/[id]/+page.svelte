@@ -1,17 +1,39 @@
 <script>
-    import {notes} from "$lib/noteStore.js"
-	import Note from "../../Note.svelte";
+// @ts-nocheck
+    import CreateNote from "../../CreateNote.svelte";
+    import Note from "../../Note.svelte";
+    import {notes as notesJS} from "$lib/noteStore.js";
+    export let savedNotes = [];
     export let data;
+            
+    let notesAPI = [];
+    let allNotes = [];
+    
+    $: filterNotes = allNotes.filter(note => note.course.id === +data.id)
 
-    //let note = $notes[+data.id]
-    let filterNotes = $notes.filter(note => note.course.id === +data.id);
+    async function getNotes(){
+        const res = await fetch ("https://luentomuistiinpano-api.netlify.app/.netlify/functions/notes");
+            
+        if(res.ok){
+            const getNotesAPI = await res.json();
+            notesAPI = getNotesAPI;
+            allNotes = [...notesAPI, ...$notesJS, ...savedNotes];
+            //console.log('allNotes', allNotes);
+        }else{
+            throw new Error();
+        }
+    }
+    getNotes();
+             
 </script>
+            
+<p><strong>List of Notes:</strong></p>
+{#if filterNotes.length > 0}
+    {#each filterNotes as note(note.id)}
+        <Note {...note}/>
+    {/each}
+{:else}
+    <p>No notes found for course.</p>
+{/if}
 
-<h2>Hello there</h2>
-
-<!--
-    filteröi kurssi notes sen kurssin id perusteella
--->
-{#each filterNotes as note(note.id)}
-    <Note {...note}/>
-{/each}
+<CreateNote />
