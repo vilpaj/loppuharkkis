@@ -5,6 +5,7 @@ Muistiinpano sovellus jolla voi tallentaa muistiinpanoja ja suodattaa kurssin mu
 Mitä pystyy:
 - Listaamaan kurssit ja lisäämään kursseja
 - Siirtymään kurssi ID perusteella näkymään jossa näet vain kurssiin liittyvät muistiinpanot
+
     (Käyttäjän lisäämät muistiinpanot eivät vielä toimi)
 - Muistiinpanojen listaus ja lisäys
 
