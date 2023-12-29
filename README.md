@@ -12,7 +12,7 @@ Mitä pystyy:
 
 Asennus (toivottavasti osaan tän tehdä oikein)
 
-```https://github.com/vilpaj/loppuharkkis```
+```git clone https://github.com/vilpaj/loppuharkkis```
 
 ```
 cd loppuharkkis
