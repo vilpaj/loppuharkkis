@@ -10,8 +10,8 @@ Mitä pystyy:
 Asennus (toivottavasti osaan tän tehdä oikein)
 ```https://github.com/vilpaj/loppuharkkis```
 
-<code>
+```
 cd loppuharkkis
 npm install
 npm run dev -- --open
-</code>
+```
