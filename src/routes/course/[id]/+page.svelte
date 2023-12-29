@@ -37,5 +37,6 @@
         <Note {...note}/>
     {/each}
 {:else}
+    <p>Ei muistiinpanoja!</p>
     <p>No notes found for course.</p>
 {/if}
