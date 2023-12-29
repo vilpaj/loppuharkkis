@@ -8,11 +8,8 @@
             
     let notesAPI = [];
     let allNotes = [];
+    let filterNotes = [];
     
-    //reaktiivinen lauseke, päivittyy aina kun allnotes tapahtuu muutoksia
-    //tai ainakin pitäsi, ei vaan savedNotes päivity prkl
-    $: filterNotes = allNotes.filter(note => note.course.id === +data.id)
-
     async function getNotes(){
         const res = await fetch ("https://luentomuistiinpano-api.netlify.app/.netlify/functions/notes");
             
@@ -21,13 +18,17 @@
             const getNotesAPI = await res.json();
             notesAPI = getNotesAPI;
             allNotes = [...notesAPI, ...$notesJS, ...savedNotes];
-            //console.log('allNotes', allNotes);
         }else{
             throw new Error();
         }
     }
-    getNotes();
-             
+
+    //reaktiivinen, suoritetaan aina kun jotain muuttuu
+    $:{
+        getNotes();
+        //suodatetaan allNotes että näkyy vain kurssi id perusteella ne notet jotka liittyvät kurssiin
+        filterNotes = allNotes.filter(note => note.course.id == +data.id)
+    }
 </script>
 <CreateNote />
 

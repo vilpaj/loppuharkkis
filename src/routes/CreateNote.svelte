@@ -1,14 +1,17 @@
 <script>
+// @ts-nocheck
+
 	import { notes } from "$lib/noteStore.js";
 
     let courseName = "";
     let courseID = "";
     let text = "";
+    let savedNotes = [];
     
     function saveNote(){
         console.log("Saved a note!");
         console.log(courseName, courseID, text);
-
+        
         let note = {
             //tarkastaa onko olemassa note jo valmiiksi 
             // ja tallentaa +1 viimeisimpään tallennettuun noteen
@@ -21,6 +24,7 @@
 
         //notes = [...notes, note];
         notes.add(note);
+        savedNotes = [...savedNotes, note]
 
         courseName = "";
         courseID = "";

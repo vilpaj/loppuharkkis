@@ -1,11 +1,11 @@
 <script>
-    // @ts-nocheck
-        //export let id;
-        export let text;
-        export let course;
-        export let timestamp;
-    
-        const {id: courseID, name: courseName} = course
+// @ts-nocheck
+    export let id;
+    export let text;
+    export let course;
+    export let timestamp;
+     
+    const {id: courseID, name: courseName} = course
 </script>
     
 <div>
