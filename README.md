@@ -8,7 +8,7 @@ Mitä pystyy:
 - Muistiinpanojen listaus ja lisäys
 
 Asennus (toivottavasti osaan tän tehdä oikein)
-*https://github.com/vilpaj/loppuharkkis*
+```https://github.com/vilpaj/loppuharkkis```
 
 cd loppuharkkis
 npm install
