@@ -6,12 +6,13 @@ Mitä pystyy:
 - Listaamaan kurssit ja lisäämään kursseja
 - Siirtymään kurssi ID perusteella näkymään jossa näet vain kurssiin liittyvät muistiinpanot
 
-    (Käyttäjän lisäämät muistiinpanot eivät vielä toimi)
+    ~~(Käyttäjän lisäämät muistiinpanot eivät vielä toimi)~~
+        toimii!
 - Muistiinpanojen listaus ja lisäys
 
 Asennus (toivottavasti osaan tän tehdä oikein)
 
-```https://github.com/vilpaj/loppuharkkis```
+```git clone https://github.com/vilpaj/loppuharkkis```
 
 ```
 cd loppuharkkis
