@@ -22,7 +22,6 @@
             throw new Error();
         }
     }
-
     //reaktiivinen, suoritetaan aina kun jotain muuttuu
     $:{
         getNotes();
