@@ -32,7 +32,7 @@
         padding: 10px;
     }
     .note:hover{
-        background-color: red;
+        background-color: rgba(207, 46, 6, 0.456);
     }
     .note:hover button{
         display: block;
