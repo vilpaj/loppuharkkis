@@ -11,6 +11,12 @@ Mitä pystyy:
         toimii!
 - Muistiinpanojen listaus ja lisäys
 
+Mitä EI pysty:
+- List, ei pysty suodattamaan tiettyä kurssia
+    > jos kuitenkin valitsee tietyn kurssin, ainoastaan sen kurssin muistiinpanot näkyvät
+- Muistiinpanoa ei pysty poistamaan
+- Ehkä jotain muutakin mutta nyt ei tule mieleen mitä... mutta nämä ainakin!
+
 Asennus (toivottavasti osaan tän tehdä oikein)
 
 ```git clone https://github.com/vilpaj/loppuharkkis```
